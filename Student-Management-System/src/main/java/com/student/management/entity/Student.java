@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,6 +31,7 @@ public class Student {
 	@Column(name = "email")
 	private String email;
 
+	@NotNull
 	private String address;
 	
 	public Student(String firstName, String lastName, String email) {
