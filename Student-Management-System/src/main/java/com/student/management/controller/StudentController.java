@@ -25,7 +25,6 @@ public class StudentController {
 	@GetMapping("/students/new")
 	public String createstudentFrom(Model model) {
 		Student s = new Student();
-		
 		model.addAttribute("student",s);
 		return "create_student";
 	}

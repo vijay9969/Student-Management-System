@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.student.management.entity.Student;
 import com.student.management.service.StudentService;
 
 @Controller
@@ -20,4 +21,13 @@ public class StudentController {
 		model.addAttribute("students", studentSer.getAllStudents());
 		return "students";
 	}
+	
+	@GetMapping("/students/new")
+	public String createstudentFrom(Model model) {
+		Student s = new Student();
+		
+		model.addAttribute("student",s);
+		return "create_student";
+	}
+	
 }
