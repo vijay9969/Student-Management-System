@@ -6,17 +6,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+// import javax.validation.constraints.NotNull;
 
-import lombok.AllArgsConstructor;
+// import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+// import lombok.NoArgsConstructor;
+// import lombok.ToString;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+// @AllArgsConstructor
+// @NoArgsConstructor
+// @ToString
 @Entity
 @Table(name = "students")
 public class Student {
