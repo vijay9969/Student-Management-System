@@ -31,8 +31,8 @@ public class Student {
 	@Column(name = "email")
 	private String email;
 
-	@NotNull
-	private String address;
+	// @NotNull
+	// private String address;
 	
 	public Student(String firstName, String lastName, String email) {
 		super();
