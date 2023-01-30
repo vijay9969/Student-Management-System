@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Student Management System</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+	.caontainer{
+		margin: 10px;
+	}.row{
+		margin: 10px;
+	}
+	#logo{
+width: 45px;
+border-radius: 5px;
+margin-left: 80px;
+    }
+	/* .btns{
+		margin:0px 7px;
+	} */
+</style>
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#"><img id="logo"src="https://img.freepik.com/free-photo/happy-young-female-student-holding-notebooks-from-courses-smiling-camera-standing-spring-clothes-against-blue-background_1258-70161.jpg?w=2000" alt=""></a>
+	  
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+			<a class="nav-link" th:href="@{/students}">Student Management</a>
+			  <a class="nav-link" th:href="@{/students/new}">Add new Management</a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+	  <br>
+	  <br>
+	<div class="caontainer">
+	<div class="row">
+	<h1>List Students</h1>
+	</div>
+	<div class="row">
+		<div class="col-lg-3">
+			<a th:href="@{students/new}"  class="btn btn-primary btn-sm mb-3">
+					Add Students
+			</a>
+		</div>
+	</div>
+	<table class="table thead-dark table-bordered">
+		<thead class="table dark">
+			<tr>
+					<th> Student First Name </th>
+					<th> Student Last Name </th>
+					<th> Student Email </th>
+					<th> Student Action </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "student: ${students}">
+				<td th:text = "${student.firstName}"></td>
+				<td th:text = "${student.lastName}"></td>
+				<td th:text = "${student.email}"></td>
+				<!-- <td><button class="btn btns btn-primary" th:href="@{/students/update}">Update</button><button class="btn btns btn-primary">Delete</button></td> -->
+				<td>
+					<a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary">Update</a>
+					<a th:href="@{/students/{id}(id=${student.id})}" class="btn btn-danger">Delete</a>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	</div>
+</body>
+
+</html>
