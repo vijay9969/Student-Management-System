@@ -21,4 +21,10 @@ public class StudentServiceImpl implements StudentService{
 		return list;
 	}
 
+	@Override
+	public Student saveStudent(Student student) {
+
+		return studentRepo.save(student);
+	}
+
 }
