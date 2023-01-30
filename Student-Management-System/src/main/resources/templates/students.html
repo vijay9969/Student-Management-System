@@ -17,9 +17,9 @@ width: 45px;
 border-radius: 5px;
 margin-left: 80px;
     }
-	.btns{
+	/* .btns{
 		margin:0px 7px;
-	}
+	} */
 </style>
 <body>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -67,7 +67,11 @@ margin-left: 80px;
 				<td th:text = "${student.firstName}"></td>
 				<td th:text = "${student.lastName}"></td>
 				<td th:text = "${student.email}"></td>
-				<td><button class="btn btns btn-primary" th:href="@{/students/update}">Update</button><button class="btn btns btn-primary">Delete</button></td>
+				<!-- <td><button class="btn btns btn-primary" th:href="@{/students/update}">Update</button><button class="btn btns btn-primary">Delete</button></td> -->
+				<td>
+					<a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary">Update</a>
+					<a th:href="@{/students/{id}(id=${student.id})}" class="btn btn-danger">Delete</a>
+				</td>
 			</tr>
 			
 		</tbody>
