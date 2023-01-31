@@ -48,7 +48,6 @@ public class StudentController {
 	public String updateStudent(@PathVariable("id")Long id,@ModelAttribute("student")Student student ,Model model) {
 		Student existingStudents = studentSer.getStudentById(id);
 		existingStudents.setId(id);
-		existingStudents.setImg(student.getImg());
 		existingStudents.setFirstName(student.getFirstName());
 		existingStudents.setLastName(student.getLastName());
 		existingStudents.setEmail(student.getEmail());

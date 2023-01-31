@@ -15,7 +15,7 @@
 	#logo{
 width: 45px;
 border-radius: 5px;
-margin-left: 10px;
+margin-left: 80px;
     }
 	/* .btns{
 		margin:0px 7px;

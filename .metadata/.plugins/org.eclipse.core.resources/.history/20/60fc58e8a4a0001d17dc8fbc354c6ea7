@@ -57,7 +57,6 @@ margin-left: 10px;
             <h1 class="text-center">Create New Student</h1>
             <div class="card-body">
                 <form th:action="@{/students}" th:object = "${student}" method="post">
-                   
                     <div class="form-group">
                         <label >Student First Name</label>
                         <input 

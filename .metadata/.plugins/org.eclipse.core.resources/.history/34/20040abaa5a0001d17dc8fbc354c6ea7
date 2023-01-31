@@ -56,6 +56,7 @@ margin-left: 10px;
 	<table class="table thead-dark table-bordered">
 		<thead class="table dark">
 			<tr>
+					<th> Student Image </th>
 					<th> Student First Name </th>
 					<th> Student Last Name </th>
 					<th> Student Email </th>
@@ -64,6 +65,7 @@ margin-left: 10px;
 		</thead>
 		<tbody>
 			<tr th:each = "student: ${students}">
+				<td th:text = "${student.img}"></td>
 				<td th:text = "${student.firstName}"></td>
 				<td th:text = "${student.lastName}"></td>
 				<td th:text = "${student.email}"></td>

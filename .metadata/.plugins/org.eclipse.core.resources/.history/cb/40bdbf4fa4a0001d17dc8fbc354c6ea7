@@ -25,7 +25,7 @@
     #logo{
 width: 45px;
 border-radius: 5px;
-margin-left: 10px;
+margin-left: 80px;
     }
 </style>
 
@@ -54,10 +54,9 @@ margin-left: 10px;
 <div class="caontainer">
 	<div class="row">
 		<div id="card" class="col-lg-4 col-md-6 col-sm-6 caontainer justify-content-center card">
-            <h1 class="text-center">Create New Student</h1>
+            <h1 class="text-center">update Student</h1>
             <div class="card-body">
-                <form th:action="@{/students}" th:object = "${student}" method="post">
-                   
+                <form th:action="@{/students/{id}(id=${student.id})}" th:object = "${student}" method="post">
                     <div class="form-group">
                         <label >Student First Name</label>
                         <input 
